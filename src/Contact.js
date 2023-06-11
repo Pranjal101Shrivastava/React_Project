@@ -1,34 +1,4 @@
-// import { useState } from 'react';
-//
-// function ContactPage() {
-//     const [form, setForm] = useState({
-//         name: '',
-//         email: '',
-//         subject: '',
-//         message: '',
-//     });
-//
-//     const handleInputChange = e => {
-//         setForm({
-//             ...form,
-//             [e.target.name]: e.target.value,
-//         });
-//     };
-//
-//     const handleSubmit = e => {
-//         e.preventDefault();
-//         // Form validation and submission logic goes here
-//     };
-//
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <input type="text" name="name" placeholder="Your name" onChange={handleInputChange} required />
-//             <input type="email" name="email" placeholder="Your email" onChange={handleInputChange} required />
-//             <input type="text" name="subject" placeholder="Subject" onChange={handleInputChange} required />
-//             <textarea name="message" placeholder="Your message" onChange={handleInputChange} required />
-//             <input type="submit" value="Submit" />
-//         </form>
-//     );
+
 // }
 //
 // export default ContactPage;
@@ -61,20 +31,32 @@ function Contact() {
 
     return (
         <div>
-            <h1>Contact Us</h1>
+            <h1 style={{color: '#212F3D',padding: '0px', margin: '0px', fontSize: '100px',backgroundColor:'#EAEDED ',}}>Contact Us</h1>
             <form onSubmit={handleSubmit}>
-                <label>
+                <div><label style={{color: '#21618C',padding: '20px', margin: '20px', fontSize: '30px'}}>
                     Name:
                     <input type="text" name="name" onChange={handleChange} />
                     {errors.name && <p>{errors.name}</p>}
                 </label>
-                <label>
+                </div>
+                <div>
+                <label style={{color: '#21618C',padding: '20px', margin: '20px', fontSize: '30px'}}>
                     Email:
                     <input type="text" name="email" onChange={handleChange} />
                     {errors.email && <p>{errors.email}</p>}
                 </label>
+                </div>
+                <div>
+                <label style={{color: '#21618C',padding: '20px', margin: '20px', fontSize: '30px'}}>
+                    Write to us:
+                    <input type="text" name="message" onChange={handleChange} />
+                   
+                </label>
+                </div>
                 {/* Add the rest of the form fields similarly */}
-                <input type="submit" value="Submit" />
+                <div style={{padding: '20px', margin: '20px', }}>
+                <input style={{color: '#212F3D',padding: '20px', margin: '20px', fontSize: '20px'}}type="submit" value="Submit" />
+                </div>
             </form>
         </div>
     );
